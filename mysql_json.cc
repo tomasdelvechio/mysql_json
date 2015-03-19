@@ -30,7 +30,7 @@
 //#define DEBUG_JSON_GET
 
 extern "C" {
-#include <mysql/mysql.h>
+#include <mysql.h>
 #include <ctype.h>
 #include <limits.h>
 }

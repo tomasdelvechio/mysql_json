@@ -1,5 +1,5 @@
 #CXXFLAGS=-Wall -Og -g3 -std=gnu++11
-CXXFLAGS=-Wall -O3 -g3 -fomit-frame-pointer -std=gnu++11
+CXXFLAGS=-Wall -O3 -g3 -fomit-frame-pointer -std=c++0x
 mysql_json.so: CXXFLAGS += -shared -fPIC
 LDFLAGS=
 
