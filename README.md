@@ -7,9 +7,15 @@ By using to the UDF it is possible to write queries accessing the properties of 
 ###Examples:
 ```
 SELECT json_get('{"a":1}', 'a')       => 1
-SELECT json_get('{"a":1}', 'b')       => NULL
+SELECT json_get('{"a":1}', 'b')       => NULL (variable missing)
 SELECT json_get('[1,2,3]', 2)         => 3
 SELECT json_get('{"a":[2]}', 'a', 0)  => 2
+
+#Also it manages the edge cases in this way:
+
+SELECT json_get('{"a":{"b":2}}', 'a') => object
+SELECT json_get('{"a":[1,2,3]}', 'a') => array
+SELECT json_get('{a:[1,2,3}',    'a') => NULL (not a json)
 
 # Verify if it is a valid JSON:
 
