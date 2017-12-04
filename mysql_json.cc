@@ -30,12 +30,13 @@
 //#define DEBUG_JSON_GET
 
 extern "C" {
-#include <mysql.h>
+#include <mysql/mysql.h>
 #include <ctype.h>
 #include <limits.h>
 }
 #include <string>
 #include "picojson/picojson.h"
+#include <assert.h>
 
 #define CONST_ITEM_TRUE		1
 #define CONST_ITEM_CACHED_VALUE	2
