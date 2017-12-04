@@ -59,6 +59,8 @@ Then compile it:
 ```
 $ git clone https://github.com/tomasdelvechio/mysql_json.git
 $ cd mysql_json
+$ git submodule init
+$ git submodule update
 $ g++ -shared -std=c++11 -fPIC -Wall -g mysql_json.cc -o mysql_json.so
 $ sudo cp mysql_json.so /usr/lib/mysql/plugin
 $ mysql -u root
